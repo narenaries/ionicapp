@@ -1,18 +1,29 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
+    <button ion-button full menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Home Changed</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <ion-row>
+    <ion-col>
+      <button ion-button full secondary (click)="connectToMFPserver()">Connect</button>
+      <button ion-button full secondary (click)="authorize()">Authorize</button>
+      <button ion-button full secondary (click)="isPushSupported()">isPushSupported</button>
+      <button ion-button full secondary (click)="pushInit()">pushInit</button>
+      <button ion-button full secondary (click)="registerDevice()">registerDevice</button>
+      <button ion-button full secondary (click)="logMsg()">Log</button>
+    </ion-col>
+    <ion-col>
+      <button ion-button full secondary (click)="getTags()">getTags</button>
+      <button ion-button full secondary (click)="subscribe()">subscribe</button>
+      <button ion-button full secondary (click)="getSubscriptions()">getSubscriptions</button>
+      <button ion-button full secondary (click)="unsubscribe()">unsubscribe</button>
+      <button ion-button full secondary (click)="unregisterDevice()">unregisterDevice</button>
+    </ion-col>
+  </ion-row>
+  <p>{{mytext}}</p>
 </ion-content>
